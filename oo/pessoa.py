@@ -9,6 +9,12 @@ class Pessoa:
     def cumprimentar (self):
         return f'Olá {id (self)}'
 
+    @staticmethod
+    def metado_estatico():
+        return 42
+    @classmethod
+    def nome_e_atributos_de_classe(cls):
+        return '{cls}- olhos {cls.olhos}'
 
 if __name__ == '__main__':
     oziel = Pessoa(nome='oziel')
@@ -29,7 +35,9 @@ if __name__ == '__main__':
     print(oziel.__dict__)
     print(luciano.olhos)
     print(oziel.olhos)
-    print(id(pessoa .olhos), id(oziel.olhos), id(luciano .olhos))
+    print(id(Pessoa .olhos), id(oziel.olhos), id(luciano .olhos))
+    print(Pessoa.metado_estatico(), luciano.metado_estatico())
+    print(Pessoa.nome_e_atributos_de_classe(),luciano.metado_estatico())
 
 
 
